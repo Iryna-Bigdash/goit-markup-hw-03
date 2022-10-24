@@ -17,6 +17,18 @@
     /* primery fonts */
     --primery-fonts: 'Roboto', sans-serif;
     --logo-fonts: 'Raleway', sans-serif;
+    --person-card-shedow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+   margin: 0;
+   padding: 0;
 }
 
 .link {
@@ -27,8 +39,6 @@
 
 .list {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 body {
@@ -39,8 +49,26 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
+.container {
+    width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    outline: 2px solid blueviolet;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.section-no-padding {
+    padding-top: 0px;
+    padding-bottom: 66px;
+}
 
 /* Logo */
+.pade-header{
+    padding: 24px 0 25px;}
+
 .logo {
     color: var(--acsent-color);
     font-family: var(--logo-fonts);
@@ -48,10 +76,15 @@ body {
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
+    outline: 2px solid red;
 }
 
 .logo-header {
     color: var(--black-color);
+}
+
+.logo-footer {
+    color: var(--main-bgr);
 }
 /* Navigation Heder */
 
@@ -61,6 +94,7 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    outline: 2px solid red;
 }
 
 .header-contacts {
@@ -71,6 +105,7 @@ body {
     letter-spacing: 0.02em;
     color: var(--main-text-color);
     cursor: pointer;
+    outline: 2px solid red;
 }
 
 .nav-link:hover,
@@ -87,23 +122,28 @@ body {
 /* Hero */
 .hero {
     background-color: var(--hero-bgr);
+    text-align: center;
 }
 
 .hero-tittle {
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-color);
 }
 
 .hero-button {
+    padding: 10px 32px;
+    min-width: 216px;
+    display: inline-block;
     color: var(--white-color);
     font-family: var(--primery-fonts);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.06em;
     line-height: 1.9;
+    text-align: center;
 
     background: var(--acsent-color);
     box-shadow: var(--hero-button-shadow);
@@ -135,6 +175,7 @@ body {
 }
 
 .preferences-title {
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
@@ -160,24 +201,49 @@ body {
 
 .projects-title,
 .team-title {
+    margin-bottom: 50px;
     font-size: 36px;
     text-align: center;
     color: var(--secondary-text-color);
 }
 
+.container-personal-card {
+padding-bottom: 30px;
+width: 270px;
+height: 368px;
+background: var(--main-bgr);
+box-shadow: var(--person-card-shedow);
+border-radius: 0px 0px 4px 4px;
+}
+
+.container-personal-card img{
+    margin-bottom: 30px;
+}
+
 .name {
+    margin-bottom: 10px;
     font-weight: 500;
     line-height: 1.19;
+    text-align: center;
     color: var(--secondary-text-color);
 }
 
 .position {
     line-height: 1.19;
+    text-align: center;
     color: var(--main-text-color);
 }
 
 .footer {
+    padding: 60px 0 60px;
     background-color: var(--hero-bgr);
+}
+.footer-log {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.footer-contacts.list li {
+    margin-bottom: 9px;
 }
 
 .footer-contacts {
@@ -212,11 +278,16 @@ body {
 }
 
 .nav-buttons {
+    padding: 6px 22px;
+    min-width: 73px;
+    display: inline-block;
     font-family: var(--primery-fonts);
     font-weight: 500;
+    font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+    text-align: center;
     background: var(--secondary-bgr);
     border: none;
     border-radius: 4px;
@@ -224,6 +295,7 @@ body {
 
 .nav-buttons:hover,
 .nav-buttons:focus {
+    padding: 6px 25px;
     background-color: var(--acsent-color);
     color: var(--white-color);
     box-shadow: var(--portfolio-nav-buttons-shadow);
@@ -243,5 +315,5 @@ body {
 .card-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 15px;
 }
