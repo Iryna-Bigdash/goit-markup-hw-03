@@ -5,6 +5,7 @@
     --secondary-text-color: #212121;
     --white-color: #FFFFFF;
     --black-color: #000000;
+    --border-btm: #ECECEC;
     --footer-contacts-color: rgba(255, 255, 255, 0.6);
     --hero-button-acsent: #188CE8;
     --hero-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
@@ -56,48 +57,55 @@ body {
     margin: 0 auto;
     outline: 2px solid blueviolet;
 }
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.section-no-padding {
-    padding-top: 0px;
-    padding-bottom: 66px;
+/* Logo */
+.logo-container {
+    display: flex;
+    margin-right: 93px;
 }
 
-/* Logo */
-.pade-header{
-    padding: 24px 0 25px;}
-
 .logo {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    
     color: var(--acsent-color);
     font-family: var(--logo-fonts);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     text-decoration: none;
-    outline: 2px solid red;
 }
 
 .logo-header {
     color: var(--black-color);
 }
-
-.logo-footer {
-    color: var(--main-bgr);
-}
 /* Navigation Heder */
 
 .nav-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
     font-family: var(--primery-fonts);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    outline: 2px solid red;
+}
+.main-nav {
+    display: flex;
+}
+.main-nav .item:not(:last-child) {
+margin-right: 50px;
 }
 
 .header-contacts {
+    display: flex;
     font-family: var(--primery-fonts);
     font-weight: 500;
     font-size: 14px;
@@ -105,8 +113,8 @@ body {
     letter-spacing: 0.02em;
     color: var(--main-text-color);
     cursor: pointer;
-    outline: 2px solid red;
 }
+
 
 .nav-link:hover,
 .nav-link:focus,
@@ -117,6 +125,24 @@ body {
 
 .current {
     color: var(--acsent-color);
+}
+
+.header-contacts.list .item:not(:last-child) {
+margin-right: 50px;
+}
+.header-contacts.list {
+    margin-left: auto;
+}
+.header-contacts.link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.main-nav-studio {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-btm);
 }
 
 /* Hero */
@@ -186,13 +212,36 @@ body {
     font-size: 14px;
 }
 
-.prferences-list,
-.projects-list,
-.team-list {
+.list.prferences-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.prferences-list .item {
+    width: 270px;
+    background-color: aqua;
+}
+.list.prferences-list .item:not(:last-child) {
+    margin-right: 30px;
+    }
+    /* Our-projects section */
+    .projects.section-no-padding {
+        padding-top: 0px;
+        padding-bottom: 66px;
+    }
+.list.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.list.projects-list .items:not(:last-child) {
+    margin-right: 30px;
+    }
 
 /* our-team section */
 .team {
@@ -237,6 +286,9 @@ border-radius: 0px 0px 4px 4px;
 .footer {
     padding: 60px 0 60px;
     background-color: var(--hero-bgr);
+}
+.logo-footer {
+    color: var(--main-bgr);
 }
 .footer-log {
     display: inline-block;
@@ -317,3 +369,6 @@ border-radius: 0px 0px 4px 4px;
     flex-wrap: wrap;
     gap: 15px;
 }
+.card-items:nth-child(3n) {
+    margin-right: 0;
+} 
