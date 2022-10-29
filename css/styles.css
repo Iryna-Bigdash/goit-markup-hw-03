@@ -19,7 +19,8 @@
     --primery-fonts: 'Roboto', sans-serif;
     --logo-fonts: 'Raleway', sans-serif;
     --person-card-shedow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    --portfolio-cards-brd: 1px solid #EEEEEE;
+    --portfolio-cards-brd: #EEEEEE;
+    ;
 }
 
 h1,
@@ -150,6 +151,9 @@ body {
 .main-nav-studio {
     display: flex;
     align-items: center;
+}
+
+.page-header {
     border-bottom: 1px solid var(--border-btm);
 }
 
@@ -284,8 +288,11 @@ body {
 }
 
 .team-card-text {
+    min-width: 370px;
     padding: 30px 10px;
     background-color: var(--main-bgr);
+    border: 1px solid var(--portfolio-cards-brd);
+    border-top: none;
 }
 
 
@@ -391,16 +398,24 @@ body {
 }
 
 /* <!-- Poftfolio items --> */
+
+.portfolio-image {
+    display: block;
+}
+
 .items-title {
-    padding-left: 24px;
     font-size: 18px;
     line-height: 2;
     color: var(--secondary-text-color);
 }
 
+.card-item .card-text {
+    min-width: 370px;
+    padding: 20px 24px;
+    border: 1px solid var(--portfolio-cards-brd);
+}
+
 .items-description {
-    padding-left: 24px;
-    padding-bottom: 20px;
     line-height: 1.88;
 }
 
@@ -411,10 +426,9 @@ body {
 }
 
 .card-item {
-    width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
-    border: var(--portfolio-cards-brd);
+    /* border: var(--portfolio-cards-brd); */
 }
 
 .card-item:nth-child(3n) {
